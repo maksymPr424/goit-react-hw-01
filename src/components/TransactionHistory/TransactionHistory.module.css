@@ -1,0 +1,24 @@
+.table {
+  border-collapse: collapse;
+  margin: 30px auto;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+}
+
+th,
+td {
+  border: 2px solid #000000c2;
+}
+
+.tableTitle {
+  color: #fff;
+  background-color: #151515e1;
+}
+
+.tableInfo {
+}
+
+.line:nth-child(even) {
+    background-color: #cccccc;
+}
