@@ -2,22 +2,15 @@ import clsx from "clsx";
 import css from "./FriendListItem.module.css";
 import PropTypes from "prop-types";
 
-const FriendListItem = ({ friends }) => {
-  console.log(friends);
+const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <>
-      {friends.map(({ avatar, name, isOnline, id }) => {
-        return (
-          <li className={css.friendListItem} key={id}>
-            <img className={css.avatar} src={avatar} alt="Avatar" width="48" />
-            <p className={clsx(css.nameText)}>{name}</p>
-            <p className={clsx(css.text, `${isOnline && css.isOnline}`)}>
-              {isOnline ? "Online" : "Offline"}
-            </p>
-          </li>
-        );
-      })}
-    </>
+    <div className={css.friendListItem}>
+      <img className={css.avatar} src={avatar} alt="Avatar" width="48" />
+      <p className={clsx(css.nameText)}>{name}</p>
+      <p className={clsx(css.text, `${isOnline && css.isOnline}`)}>
+        {isOnline ? "Online" : "Offline"}
+      </p>
+    </div>
   );
 };
 
