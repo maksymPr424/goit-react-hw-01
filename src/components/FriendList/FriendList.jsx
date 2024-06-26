@@ -8,7 +8,12 @@ const FriendList = ({ friends }) => {
       {friends.map(({ avatar, name, isOnline, id }) => {
         return (
           <li className={css.friendListItem} key={id}>
-            <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
+            <FriendListItem
+              avatar={avatar}
+              name={name}
+              isOnline={isOnline}
+              id={id}
+            />
           </li>
         );
       })}
